@@ -12,7 +12,7 @@ public class areaofcircle {
         area = 3.17f * radius * radius;
         System.out.print("AREA OF CIRCLE IS ");
         System.out.print(area);
-
+        
         scan.close();
     }
 }
