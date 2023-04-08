@@ -11,7 +11,7 @@ public class reversenumber {
         int number = scan.nextInt();
         int copy_number = number;
 
-        for (; number>0; ) {
+        while ( number>0) {
             remainder = number % 10;
             reverse = reverse*10 + remainder;
             number/=10;

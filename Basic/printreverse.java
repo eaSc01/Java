@@ -10,12 +10,11 @@ public class printreverse {
         System.out.print("ENTER YOUR NUMBER: ");
         number = scan.nextInt();
 
-        for ( ; number>0; ) {
+        while ( number>0 ) {
             remainder = number%10;
             System.out.print(remainder);
             number/=10;
         }
-        
-        scan.close();
+        scan.close();     
     }
 }
