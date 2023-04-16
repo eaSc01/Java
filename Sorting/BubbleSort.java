@@ -21,7 +21,7 @@ public class BubbleSort {
 
     public static void prrArray(int array[]) {
         for (int i=0 ; i<array.length; i++) {
-            System.out.print(array[i] + " ");
+            System.out.print(array[i] + "  ");
         }
     }
 
