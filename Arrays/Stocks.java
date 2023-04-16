@@ -1,7 +1,7 @@
 public class Stocks {
 
-    public static int BuySellPrice(int prices[]) {
-        int buyPrice = Integer.MAX_VALUE;
+    public static int BuySellPrice(int prices[]) {  
+        int buyPrice = Integer.MAX_VALUE;                   //logical algorithm
         int maxProfit = 0;
 
         for (int today=0 ; today<prices.length ; today++) {
@@ -14,7 +14,7 @@ public class Stocks {
         }   return maxProfit;
     }
 
-    public static int stockProfit(int value[]) {
+    public static int stockProfit(int value[]) {        //Bruteforce, TC: (O)n^2
         int maxProfit = Integer.MIN_VALUE;
         int cost = 0;
 
