@@ -50,8 +50,28 @@ public class SortingAlgorithms {
             array[prev + 1] = curr;
         }
     }
-
     
+    public static void countingSort(int array[]) {
+        int largest = Integer.MIN_VALUE;
+        for (int i=0 ; i<array.length ; i++) {
+            largest = Math.max(largest, array[i]);
+        }    
+
+        //count frequencies
+        int count[] = new int[largest + 1];
+        for (int i=0 ; i<array.length ; i++) {
+            count[array[i]]++;
+        }
+
+        for (int i=0, j=0 ; i<count.length ; i++) {
+            while (count[i] > 0) {
+                array[j] = i;
+                j++;
+                count[i]--;
+            }
+        }
+    }
+
     public static void prrArray(int array[]) {
         for (int i=0 ; i<array.length; i++) {
             System.out.print(array[i] + "  ");
@@ -62,8 +82,8 @@ public class SortingAlgorithms {
         int nums[] = {3,1,4,2,5};
         // BubbleSort(nums);
         // SelectionSort(nums);
-        insertionSort(nums);
-        
+        // insertionSort(nums);
+        countingSort(nums);
         prrArray(nums);
     }
 }
