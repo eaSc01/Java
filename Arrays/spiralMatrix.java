@@ -5,7 +5,7 @@ public class spiralMatrix {
         int sCOL = 0;
         int eROW = matrix.length - 1;
         int eCOL = matrix[0].length - 1;
-
+        
         while (sROW <= eROW && sCOL <= eCOL) {
             
             //top
