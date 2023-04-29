@@ -1,6 +1,15 @@
 import java.util.Scanner;
 
 public class string_intro {
+
+    public static boolean palindrome(String str) {
+        for (int i = 0 ; i<str.length()/2 ; i++) {
+            if (str.charAt(i) != str.charAt(str.length() - i - 1)) {
+                return false;
+            }
+        } return true;    
+    }
+    
     public static void pString(String str) {
         for (int i=0 ; i<str.length() ; i++) {
             System.out.print(str.charAt(i) + " ");
@@ -26,7 +35,8 @@ public class string_intro {
 
         // System.out.println(str1 + "\nLENGTH: " + str1.length());
         // concatStrings();
-        pString(str1);
-
+        // pString(str1);
+        System.out.println(palindrome(str1));
+        scan.close();
     }
 }
