@@ -8,6 +8,8 @@ public class StringBuilderC {
             strE.append(strB.charAt(i));
             Integer count = 1;
 
+
+            //counting count
             while (i<strB.length() - 1 && strB.charAt(i) == strB.charAt(i+1)) {
                 count++;
                 i++;
@@ -60,8 +62,8 @@ public class StringBuilderC {
         StringBuilder name = new StringBuilder("");
         StringBuilder sent = new StringBuilder("aaaabbbcddddeefff");
 
-        compressString(sent);
-        //toUpperC(sent);
+        // compressString(sent);
+        toUpperC(sent);
         // appendString(name);
     }
 }
