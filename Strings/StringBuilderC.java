@@ -64,6 +64,6 @@ public class StringBuilderC {
 
         // compressString(sent);
         toUpperC(sent);
-        // appendString(name);
+        appendString(name);
     }
 }

@@ -79,7 +79,7 @@ public class stringBasics {
         // concatStrings();
         // pString(str1);
         // System.out.println(palindrome(str1));
-        // subString(str1, scan);
+        subString(str1, scan);
         largestString(fruits);
         scan.close();
     }
