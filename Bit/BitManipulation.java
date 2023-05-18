@@ -15,6 +15,15 @@ public class BitManipulation {
         }
     }
 
+    public static int totalBits() {
+        int n = ~0, count = 0;
+
+        while (n != 0) {
+            count++;
+            n = n>>1;
+        } return count;
+    }
+
     // this function clears or sets the reqired bit to 1 in a binary number
     public static int setIth(int number, int position) {
 
@@ -124,7 +133,7 @@ public class BitManipulation {
         // System.out.println(exponentOf2(64));
         // System.out.println(countSetBits(20));
         // System.out.println(fastExponent(5,4));
-
+        System.out.println(totalBits());
         scan.close();
     }
 }
