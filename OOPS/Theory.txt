@@ -1,0 +1,87 @@
+/*
+
+Introduction to Object Oriented Programming
+
+    Objects = entities in the real world
+    Classes = Group of similar entities 
+
+        in a class,
+        attribute (property)
+        functions (behaviour)
+
+    -> Access Modifiers:
+
+    private: only within class
+    default: within class and within package
+    protected: within class, package and outside package by sublass only
+    public: full access to any
+
+    
+4 pillars of OOPs: 
+
+    Encapsulation: is defined as the wrapping up of the data (properties of the object) & methods under a single unit.
+    It also implements data hiding (Usage of access speicifers to hide sensitive data).
+
+
+    Inheritance: is when the properties & methods of base class (parent/super class) are passed to a derived class (child/sub class)
+
+        Types of Inheritance:
+        
+       _> Single-Level Inheritance: Properties & Methods of base class are inherited to derived class.
+       -> Multi-level Inheritence: The multi-level inheritance includes the involvement of at least two or more than classes
+       -> Hierarichal Inheritance: is a type of inheritance in which the same class is inherited by more than one class.
+       -> Hybrid Inheritance: the hybrid inheritance is the composition of two or more types of inheritance.
+
+
+    Polymorphism: Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.
+
+        Types of Polymorphism:
+
+        -> Compile Time Polymorphism (Static): Compile-time polymorphism is obtained through method overloading. The term method overloading allows us to have more than one method with the same name, but different parameters numbers or their datatypes. Since this process is executed during compile time, that's why it is known as Compile-Time Polymorphism.
+
+        -> Runtime Polymorphism (Dynamic): Is obtained through Method Overriding, it happens when both parent and child class have same method name with different definition, in this case, if the method of child class is called, then only the child class method will be executed, same for parent class.
+        
+
+
+    Abstraction: Is the process of hiding all the unneccessary data, and showing only the important data to the user.
+                It only gives an idea not the implementation to the Abstract class, but must be implemented in its child classes.
+
+        Can be implemented in 2 ways:
+
+            1) By Using Abstract Classes (abstract class <classname>)
+
+                Abstract classes can:
+                    -> have both abstract as well as non-abstract methods
+                    -> not create an instance/object of a class.
+                    -> have constructors for their subclasses.
+                    
+            2) By Using Interfaces
+
+
+
+Constructors:
+
+    It is a special method which is invoked automatically at the time of object creation/
+
+        -> Constructors have the same name as the class or the structure
+        -> Constructors dont have any return type, not even void.
+        -> Constructors are only called once at the time of object creation.
+        -> Memory allocation happens when the Constructor is called.
+
+    Multiple Constructors can be defined in a class, but the compiler will call the only one constructor which matches
+    the required type, mentioned below, this is called as Constructor overloading.
+
+    i,e, The constructor overloading can be defined as the concept of having more than one constructor with different 
+    parameters so that every constructor can perform a different task.
+
+    Types:
+
+        -> Non - Parameterized: no parameters are passed in the constructor.
+        -> Parameterized: parameters are passed in the constructor.
+        -> Copy Constructor: 
+
+Packages:
+
+    Packages are a group of similar classes, interfaces, and sub-packages
+
+ */
