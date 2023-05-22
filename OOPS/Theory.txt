@@ -1,5 +1,3 @@
-/*
-
 Introduction to Object Oriented Programming
 
     Objects = entities in the real world
@@ -126,4 +124,3 @@ Super Keyword: Like this keyword, superkeyword is also used to point to a proper
 Constructor Chaining:   https://www.javatpoint.com/what-is-constructor-chaining-in-java
     
     
- */

@@ -106,14 +106,14 @@ class Pen {
 
 class BankAcc {
     public String username = "admin";
-    private String password = "admin";
+    // private String password = "admin";
 
     void changeUsername(String newName) {
         username = newName;
     }
 
     void changePassword(String newPwd) {
-        password = newPwd;
+        // password = newPwd;
     }
 }
 
