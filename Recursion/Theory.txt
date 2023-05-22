@@ -1,0 +1,20 @@
+Recursion : Iterations
+            Functions
+
+When a function calls itself, results in recursive functions,
+
+and recursion is a method of solving computer problems where the
+solution depends on solutions to smaller instances of the same problems
+
+
+Components of Recursive Funtions:
+
+    -> Base Case
+    -> Actual Work (depends on the problem)
+    -> Inner call
+
+In a recursive function call, the memory stack fills up, and goes in upward direction, after the base case is met, the stack starts to clear up, and goes to downward direction, i.e, the direction first goes to base case, then towards the solution.
+
+For every recursive function call, the parameters of the function occupies space on the stack memory, if the functions calls itself a lot of times or occupies a lot of space which may lead to fill the memory stack completely, because of either a lot of calls, or too much memory occupied by parameters of recursive function, causes the error, called as Stack Overflow.
+
+Hence, Recursion is very dangerous in cases like these triggering Stack Overflow.

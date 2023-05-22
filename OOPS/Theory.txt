@@ -32,14 +32,24 @@ Introduction to Object Oriented Programming
        -> Hierarichal Inheritance: is a type of inheritance in which the same class is inherited by more than one class.
        -> Hybrid Inheritance: the hybrid inheritance is the composition of two or more types of inheritance.
 
+       NOTE: A parent class can be used as a reference for its child class object to assign memory 
+                example: Vehicle V = new Car();
+
+                where vehicle is parent class of car, it is possible because properties of vehicle are present inside car class, 
+                therefore it can used as a reference
+
 
     Polymorphism: Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.
 
         Types of Polymorphism:
 
-        -> Compile Time Polymorphism (Static): Compile-time polymorphism is obtained through method overloading. The term method overloading allows us to have more than one method with the same name, but different parameters numbers or their datatypes. Since this process is executed during compile time, that's why it is known as Compile-Time Polymorphism.
+        -> Compile Time Polymorphism (Static): Compile-time polymorphism is obtained through method overloading. 
+        The term method overloading allows us to have more than one method with the same name, but different parameters numbers or their datatypes. 
+        Since this process is executed during compile time, that's why it is known as Compile-Time Polymorphism.
 
-        -> Runtime Polymorphism (Dynamic): Is obtained through Method Overriding, it happens when both parent and child class have same method name with different definition, in this case, if the method of child class is called, then only the child class method will be executed, same for parent class.
+        -> Runtime Polymorphism (Dynamic): Is obtained through Method Overriding, it happens when both parent and child class have same method name with different definition, 
+        in this case, if the method of child class is called, then only the child class method will be executed, 
+        same for parent class.
         
 
 
@@ -84,4 +94,36 @@ Packages:
 
     Packages are a group of similar classes, interfaces, and sub-packages
 
+
+Interfaces:
+
+    A Class is blueprints of object, similarly Interface is blueprint of a class/
+    It can be used to implement multiple Inheritance.
+
+    In an interface,
+    1) All methods are public, abstract & without implementation.
+    2) Used to achieve total abstraction.
+    3) Variables in interfaces are final, public & static.
+
+
+
+Static keyword: It is used to share the same variable or method of a given class.
+
+    It can share:
+        -> Properties
+        -> Funtions
+        -> Blocks
+        -> Nested Classes
+
+    NOTE: Static variables and methods can use class.property syntax to access instead of object.property syntax
+
+
+Super Keyword: Like this keyword, superkeyword is also used to point to a property or method but of its immediate parent class object.
+
+    Uses: To access parent properties, functions & constructors.
+
+
+Constructor Chaining:   https://www.javatpoint.com/what-is-constructor-chaining-in-java
+    
+    
  */

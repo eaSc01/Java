@@ -172,3 +172,47 @@ class Cat extends Mammal {     // Multi Level Inheritence, from Animal to Mammal
         return this.color;
     }
 }
+
+
+//interfaces 
+
+interface Car {
+    int wheels = 4;
+    void engine();    
+    void speed();
+}
+
+class Toyota implements Car {
+    public void engine() {              //public mandatory
+        System.out.println("H2");
+    }
+    public void speed() {
+        System.out.println("340");
+    }
+}
+
+class Maruti implements Car {
+    public void engine() {              //public mandatory
+        System.out.println("H1");
+    }
+    public void speed() {
+        System.out.println("120");
+    }
+}
+
+interface herbivore {
+    void eats_plants();
+}
+
+interface carnivore {
+    void eats_meat();
+}
+
+class bear implements herbivore, carnivore{
+    public void eats_plants() {
+        System.out.println("Plant eater");
+    }
+    public void eats_meat() {
+        System.out.println("Meat eater");
+    }
+}
