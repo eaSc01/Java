@@ -140,7 +140,106 @@ public class RecursionsFunc {
         return isFound; 
     }
 
+    public static int exponent(int x, int n) { // O(n) TC
+        if (n == 0) {
+            return 1;
+        } 
 
+        return x * exponent(x, n-1);
+    }
+
+    public static int optiExpo(int x, int n) {  // TC O(logn)
+        if (n == 0) {
+            return 1;
+        }
+
+        int halfexpo = optiExpo(x, n/2);        // finds exponent of half n
+        int halfExpoSq = halfexpo * halfexpo; // squaring half n of exponent
+
+        // breaks x^n into x^(n/2), i.e, for 2^10, its 2^5 * 2^5, for odd n, its x * f(x) * f(x), for 2^10, its 2 * 2^5 * 2^5
+
+        if (n%2 == 1) {
+            halfExpoSq = x * halfExpoSq;
+        }
+
+        return halfExpoSq;
+    }
+
+    public static int tilingProb(int n) {
+
+        // Given a "2 x n" floor and tiles of size "2 x 1", count the number of ways to tile the given board using the 2x1 tiles.
+
+        // A tile can either be placed horiontally or vertically 
+        
+        if (n==0 || n==1) {
+
+            // number of possible ways to put tiles, if length is 0 or 1, is 1
+            return 1;
+        } 
+
+        // calculating number of vertical & horizontal ways separately,
+
+        // vertical goes n - 1, because m (width) of floor matches width of tile
+        // horizontal goes n - 2, because of analysis on the diagram
+
+        // int vertical = tilingProb(n - 1);
+        // int horizontal = tilingProb(n - 2);
+
+        return tilingProb(n - 1) + tilingProb(n - 2);
+    }
+
+    public static void noDuplicatesStr(String Str, StringBuilder newStr, int i, boolean map[]) {    
+
+        //iteration recursion, removes duplicate characters from string
+
+        if (i == Str.length()) {        // traversed complete array
+            System.out.println(newStr);
+            return;
+        } 
+
+        char currchar = Str.charAt(i);  //stores current character
+
+        if (map[currchar - 'a'] == false) {     // character never occured before
+            map[currchar - 'a'] = true;
+            noDuplicatesStr(Str, newStr.append(currchar), i+1, map);    
+            // does same work for remaining string, but append the current character
+
+        } else {    // character occured before
+            noDuplicatesStr(Str, newStr, i+1, map);     // does same work for remaing string
+
+        }
+    }
+
+    public static int nFriends(int n) {
+
+        // Given n friends, each one can remain single or can be paired up with some other person, each friend can only be paired only once, find the total number of ways in which friends can remain single or can be paired up.
+
+        if (n == 2 || n == 1) {
+            return n;
+        }
+
+        // int single = nFriends(n-1);     // removes single person from n
+        // int pair = (n-1) * nFriends(n-2);       // calculates the total possibilites for each pair
+
+        return nFriends(n-1) + (n-1) * nFriends(n-2);       // addition thm
+    }
+
+    public static void binaryStrings(String str, int lastDigit, int n) {
+
+        // decreaments n on each iteration/digit print
+        if (n == 0) {
+            System.out.println(str);
+            return; 
+        }
+
+        // recalls itself and stores 0 in string
+        binaryStrings(str+"0", 0, n - 1);
+
+        // recalls itself after prev call, and replaces with 1 in string
+        if (lastDigit == 0) {
+            binaryStrings(str+"1", 1, n - 1);
+        }
+    }
     public static void main(String args[]) {
         
         // System.out.println(reverseNum(10));
@@ -156,5 +255,14 @@ public class RecursionsFunc {
         // System.out.println(isSorted(arr, 0));
         // System.out.println(lastOccur(arr, 34, 0));
 
+        // System.out.println(tilingProb(4));
+
+        // boolean alphabetMap[] = new boolean[26];
+        // String str = "aaaabebeeccccosaddeedddeoecba";
+        // StringBuilder newStr = new StringBuilder("");
+        // noDuplicatesStr(str, newStr, 0, alphabetMap);
+
+        // System.out.println(nFriends(3));
+        // binaryStrings("", 0, 4);
     }
 }
