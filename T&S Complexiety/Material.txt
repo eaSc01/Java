@@ -1,0 +1,31 @@
+Order Complexity analysis: Amount of time and space taken up by an algorithm as function of input size, not the actual time taken in real life.
+
+Ways to find out time Complexity:
+1) Experimental: Actually finding out time taken by an algorithm and then mapping it with the input function on a graph practically.
+2) Theoritical: Using conceptual mathematical functions to define a relation between time taken by an algorithm vs. its input function. Such as Big O, Omega, Theta.
+
+O: Stands for worst case Complexity
+Omega: Stands for best case Complexity
+Theta 0: Stands for average case Complexity, when best and worst case Complexities are same.
+
+Big O vs Small O,
+Big O denotes the losely held range (Greater range) between best and worst Complexities, whereas Small O denotes the tighly held range (Very small scope) between best and worst case Complexities.
+
+Some common time Complexities, 1 (Constant), logn, n, n^2, n^3, 2^n. (in ascending order)
+
+TC for:
+
+Simple Loop: O(n)
+Nested Loop: O(n^2), not always
+Bubble, Selection, Insertion Sort: O(n^2)
+Linear Search: O(n)
+Binary Search: O(logN)
+
+For Recursion:
+Time Complexity, Total work done = number of calls * work in each call.
+Space Complexity = Max depth of call stack * memory taken in each call. 
+
+
+Factorial: TC = O(n), SC = O(n).
+Sum of N numbers: TC = O(n), SC = O(n).
+Fibonacci: TC = O(2^n), SC = O(n) (Uses D&C)

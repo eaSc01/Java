@@ -62,7 +62,7 @@ public class StringBuilderC {
         StringBuilder name = new StringBuilder("");
         StringBuilder sent = new StringBuilder("aaaabbbcddddeefff");
 
-        // compressString(sent);
+        compressString(sent);
         toUpperC(sent);
         appendString(name);
     }
