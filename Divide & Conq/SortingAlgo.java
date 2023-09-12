@@ -32,9 +32,9 @@ public class SortingAlgo {
         int AuxArray[] = new int[endingInd - startInd + 1];
 
         // iterators for each array
-        int i = startInd;
-        int j = mid + 1;
-        int k = 0;
+        int i = startInd;   // left part
+        int j = mid + 1;    // right part
+        int k = 0;  // aux array
 
         while (i <= mid && j <= endingInd) {
             if (arr[i] < arr[j]) {
