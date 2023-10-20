@@ -176,6 +176,21 @@ public class BinarySearchTrees {
         return true;
     }
 
+    public void mirrorBST(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+
+        TreeNode left = root.left;
+        TreeNode right = root.right;
+
+        root.left = right;
+        root.right = left;
+
+        mirrorBST(root.left);
+        mirrorBST(root.right);
+    }
+
     public static void main(String[] args) {
         BinarySearchTrees tree = new BinarySearchTrees();
         TreeNode root = null;
@@ -192,12 +207,14 @@ public class BinarySearchTrees {
 
         // root = tree.delete(root, 5);
         tree.inOrderTraversal(root);
-        // System.out.println();
-
+        System.out.println();
+        
         // tree.printInRange(root, 2, 4);
-
+        
         // tree.printPathWise(root, new ArrayList<>());
-        System.out.println(tree.validBST(root, null, null));
+        // System.out.println(tree.validBST(root, null, null));
+        tree.mirrorBST(root);
+        tree.inOrderTraversal(root);
 
     }
 }
