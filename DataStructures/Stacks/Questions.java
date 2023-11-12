@@ -93,7 +93,7 @@ public class Questions {
             // greater in the left : reverse the loop, cuz now we want stack to store the elements in the left
             // smaller in the right : reverse the while loop condition, cuz now we want to remove greater elements to find the smaller
             // smaller in the left : reverse the for loop and the while loop condition
-            // greater in the right : above code
+            // wgreater in the right : above code
         }
 
         for (int j = 0; j < elements.length; j++) {

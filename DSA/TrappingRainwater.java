@@ -21,7 +21,7 @@ public class TrappingRainwater {
 
         for (int bar = 0 ; bar<bars.length ; bar++) {               //calculating waterLevel of each bar,
             waterLevel = Math.min(leftMax[bar], rightMax[bar]);     //also, summing up water volume using = (Water Level - Current Bar Height)
-            volumeWater += waterLevel - bars[bar];
+            volumeWater += (waterLevel - bars[bar]);
         }
 
         return volumeWater;
