@@ -5,7 +5,7 @@ import java.util.Queue;
 public class Questions {
 
     static class StackingQueue {
-        // Quxeue using 2 stacks, using add of O(n)
+        // Queue using 2 stacks, using add of O(n)
 
         static Stack<Integer> s1 = new Stack<>();
         static Stack<Integer> s2 = new Stack<>();
