@@ -6,6 +6,7 @@ public class SortingAlgorithms {
             
             int swaps = 0; //Checks how many swaps are done in each inner iteration
             for (int currIndex = 0 ; currIndex<array.length-1-turn ; currIndex++) {
+
                 if (array[currIndex] > array[currIndex+1]) {
                     int temp = array[currIndex];
                     array[currIndex] = array[currIndex + 1];
