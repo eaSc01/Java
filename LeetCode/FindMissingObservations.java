@@ -1,5 +1,3 @@
-package LeetCode;
-
 class Solution {
     public int[] missingRolls(int[] rolls, int mean, int n) {
         int m = rolls.length;

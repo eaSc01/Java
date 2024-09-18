@@ -1,4 +1,4 @@
-public class spiralMatrix {
+public class SpiralMatrix {
 
     public static void spiralMatrice(int matrix[][]) {
         int sROW = 0;

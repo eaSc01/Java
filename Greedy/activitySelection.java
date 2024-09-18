@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class activitySelection {
+public class ActivitySelection {
 
     public static void actSelect(int startTime[], int endTime[]) {
         int maxAct = 0;
