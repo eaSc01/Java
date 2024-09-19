@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class BinarySearch {
-    public static int BinarySearch(int array[], int key) {
+    public static int binarySearch(int array[], int key) {
         
         int start = 0;
         int end = array.length - 1;
@@ -41,7 +41,7 @@ public class BinarySearch {
         System.out.print("ENTER KEY: ");
         int element = scan.nextInt();
 
-        int loc = BinarySearch(numbers, element);
+        int loc = binarySearch(numbers, element);
 
         if (loc == -1) {
             System.out.print("ELEMENT NOT FOUND\n");
