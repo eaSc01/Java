@@ -1,40 +1,36 @@
 public class RotatedBinarySearch {
+    public static int search(int[] arr, int target) {
+        int si = 0;
+        int ei = arr.length - 1;
 
-    public static int RotatedBinSearch(int array[], int target) {
-        int start = 0, end = array.length - 1;
+        while (si <= ei) {
+            int mid = si + (ei - si) / 2;
 
-        while (start<=end) {
-            
-            int mid = (start + end) / 2;
-
-            if (array[mid] == target) {
+            if (arr[mid] == target) {
                 return mid;
+                
+            // line 1
+            } else if (arr[si] <= arr[mid]) {
+                // line 1 - left of mid
+                if (arr[si] <= target && target <= arr[mid]) {
+                    ei = mid - 1;
 
-            } else if (array[start] <= array[mid]) {
-
-                //left is sorted
-                if (target < array[mid] && target >= array[start]) {    //element check
-                    end = mid - 1;
-                } else {
-                    start = mid + 1;        //switch to another part (to the right)
+                } else { // right of mid (whole)
+                    si = mid + 1;
                 }
-            }
 
-            else if (array[mid] <= array[end]) {
+            // line 2
+            } else {    // line 2 - right
+                if (arr[mid] <= target && target <= arr[ei]) {
+                    si = mid + 1;
 
-                //right is sorted
-                if (target > array[mid] && target <= array[end]) {      //element check
-                    start = mid + 1;
-                } else {
-                    end = mid - 1;          //switch to another part (to the left)
+                } else {  // left of mid (whole)
+                    ei = mid - 1;
                 }
-            }
-        } return -1;
-    } 
 
-    public static void main(String args[]) {
-        int nums[] = {4,  5, 6, 7, 0, 1, 2};
-        int target = 3;
-        System.out.println(RotatedBinSearch(nums, target));
+            }
+        }
+
+        return -1;
     }
 }
