@@ -1,3 +1,5 @@
+package LeetCode;
+
 class Solution {
     public String shortestPalindrome(String s) {
         // Define a modulus value for hashing

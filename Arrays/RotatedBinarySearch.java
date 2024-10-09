@@ -1,3 +1,5 @@
+package Arrays;
+
 public class RotatedBinarySearch {
     public static int search(int[] arr, int target) {
         int si = 0;

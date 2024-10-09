@@ -1,3 +1,5 @@
+package Arrays;
+
 public class ReverseArray {
     public static void output_array(int array[], int range) {
         for (int i=0 ; i<range ; i++) {

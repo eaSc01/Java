@@ -1,3 +1,5 @@
+package Arrays;
+
 public class MatrixSum { 
 
     public static void sumOf(int matrix[][]) {

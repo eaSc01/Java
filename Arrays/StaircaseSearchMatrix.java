@@ -1,3 +1,5 @@
+package Arrays;
+
 public class StaircaseSearchMatrix {
 
     public static void staircaseSearch(int matrix[][], int key) {

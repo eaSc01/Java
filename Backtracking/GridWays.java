@@ -1,3 +1,5 @@
+package Backtracking;
+
 public class GridWays {
     public static int gWaysBackTrack(int curRow, int curCol, int rows, int cols) {
         // reach destination cell (i.e row-1, col-1 cell) by using only right and down path.

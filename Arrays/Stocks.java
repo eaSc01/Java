@@ -1,3 +1,5 @@
+package Arrays;
+
 public class Stocks {
 
     public static int BuySellPrice(int prices[]) {  

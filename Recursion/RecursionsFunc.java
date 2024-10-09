@@ -1,3 +1,4 @@
+package Recursion;
 public class RecursionsFunc {
 
     public static int reverseNum(int n) {

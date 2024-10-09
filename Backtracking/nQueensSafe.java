@@ -1,3 +1,4 @@
+package Backtracking;
 public class nQueensSafe {
 
     static int count = 0;

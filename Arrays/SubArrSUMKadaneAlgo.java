@@ -1,4 +1,6 @@
-public class SubArrSUM_KadaneAlgo {
+package Arrays;
+
+public class SubArrSUMKadaneAlgo {
 
     public static int getMaxSum(int array[]) {
 

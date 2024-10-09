@@ -1,6 +1,8 @@
+package Recursion;
+
 import java.util.*;
 
-class Solution {  // random sequencing method
+class Solution1 {  // random sequencing method
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
         generatePermutations(nums, new ArrayList<>(), new boolean[nums.length], ans);
@@ -30,7 +32,7 @@ class Solution {  // random sequencing method
     }
 }
 
-class Solution2 { // swap method
+class Solution23 { // swap method
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
         generatePermutations(0, nums, ans);

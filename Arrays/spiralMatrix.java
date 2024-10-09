@@ -1,3 +1,5 @@
+package Arrays;
+
 public class SpiralMatrix {
 
     public static void spiralMatrice(int matrix[][]) {

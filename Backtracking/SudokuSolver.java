@@ -1,3 +1,5 @@
+package Backtracking;
+
 public class SudokuSolver {
 
     public static boolean isSafe(int sudoku[][], int row, int col, int digit) {

@@ -1,3 +1,5 @@
+package OOPS;
+
 public class HybridInheritence {
     public static void main(String args[]) {
         

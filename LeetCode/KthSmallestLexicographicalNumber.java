@@ -1,3 +1,5 @@
+package LeetCode;
+
 class Solution {
     public int findKthNumber(int n, int k) {
         // Start with the first number in lexicographical order

@@ -1,4 +1,6 @@
-public class SubArrSUM_Prefix {
+package Arrays;
+
+public class SubArrSUMPrefix {
     public static int getMaxSum(int array[]) {
         int maxSum = Integer.MIN_VALUE;
         int curSum = 0;
