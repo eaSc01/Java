@@ -1,7 +1,4 @@
-
-
-
-class Solution {
+public class StringToInt {
     public int myAtoi(String s) {
         s = s.trim();
         if (s.length() == 0) {

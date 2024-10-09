@@ -25,7 +25,7 @@ class Item {
     }
 }
 
-class Solution2 {
+public class WidthOfTree {
     public int widthOfBinaryTree(TreeNode root) {
         Stack<List<Integer>> pairs = new Stack<>();
         Queue<Item> q = new LinkedList<>();

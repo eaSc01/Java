@@ -1,6 +1,6 @@
 package LeetCode;
 
-class Solution {
+public class KthSmallestLexicographicalNumber {
     public int findKthNumber(int n, int k) {
         // Start with the first number in lexicographical order
         int curr = 1;

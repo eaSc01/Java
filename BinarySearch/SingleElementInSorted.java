@@ -1,6 +1,6 @@
 package BinarySearch;
 
-class Solution {
+public class SingleElementInSorted {
     public int singleNonDuplicate(int[] nums) {
         if (nums.length == 1) {
             return nums[0];

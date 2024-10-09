@@ -1,6 +1,6 @@
 package LeetCode;
 
-class Solution {
+public class ShortestPalindrome {
     public String shortestPalindrome(String s) {
         // Define a modulus value for hashing
         long mod = 100000007;

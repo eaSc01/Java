@@ -27,7 +27,7 @@ class Tuple {
     }
 }
 
-class Solution {
+public class VerticalOrderTraversal {
     public List<List<Integer>> verticalTraversal(TreeNode root) {
         Queue<Tuple> q = new LinkedList<>();
         TreeMap<Integer, TreeMap<Integer, PriorityQueue<Integer>>> map = new TreeMap<>();

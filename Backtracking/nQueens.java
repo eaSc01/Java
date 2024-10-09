@@ -2,7 +2,7 @@ package Backtracking;
 
 import java.util.*;
 
-class Solution {
+public class NQueens {
     public List<List<String>> solveNQueens(int n) {
         List<List<String>> ans = new ArrayList<>();
         solve(0, n, board(n), ans);

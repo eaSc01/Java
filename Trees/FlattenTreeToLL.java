@@ -13,7 +13,7 @@
  *     }
  * }
  */
-class Solution {
+public class FlattenTreeToLL {
 
     TreeNode prev = null; 
 

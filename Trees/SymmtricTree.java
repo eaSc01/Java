@@ -13,7 +13,7 @@
  *     }
  * }
  */
-class Solution {
+public class SymmtricTree {
     public boolean isSymmetric(TreeNode root) {
         return isSame(root.left, root.right);
     }

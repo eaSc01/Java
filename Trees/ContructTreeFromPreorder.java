@@ -1,7 +1,7 @@
 import java.util.*;
 
 
-class Solution {
+public class ContructTreeFromPreorder {
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i<inorder.length; i++) {

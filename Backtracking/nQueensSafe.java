@@ -1,5 +1,6 @@
 package Backtracking;
-public class nQueensSafe {
+
+public class NQueensSafe {
 
     static int count = 0;
 

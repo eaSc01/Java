@@ -2,7 +2,7 @@ package LeetCode;
 
 import java.util.*;
 
-class Solution {
+public class RankTransformAnArray {
     public int[] arrayRankTransform(int[] arr) {
         Map<Integer, Integer> map = new HashMap<>();
         int[] sorted = arr.clone();

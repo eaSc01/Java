@@ -2,7 +2,7 @@ package LeetCode;
 
 import java.util.*;
 
-class Solution {
+public class LengthOfLongestCommonPrefix {
     public int longestCommonPrefix(int[] arr1, int[] arr2) {
         Set<String> set = new HashSet<>();
 

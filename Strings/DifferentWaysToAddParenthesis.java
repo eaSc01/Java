@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+public class DifferentWaysToAddParenthesis {
     public List<Integer> diffWaysToCompute(String expression) {
         List<Integer> ans = new ArrayList<>();
 

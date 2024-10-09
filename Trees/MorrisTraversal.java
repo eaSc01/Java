@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+public class MorrisTraversal {
 
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> inorder = new ArrayList<>();

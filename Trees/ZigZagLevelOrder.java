@@ -1,6 +1,6 @@
 import java.util.*;;
 
-class Solution {
+public class ZigZagLevelOrder {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         if (root == null) {
             return new ArrayList<>();

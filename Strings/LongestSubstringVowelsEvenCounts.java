@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+public class LongestSubstringVowelsEvenCounts {
     public int findTheLongestSubstring(String s) {
         int xor = 0, len = 0;
         Map<Integer, Integer> map = new HashMap<>();

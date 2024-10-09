@@ -1,6 +1,6 @@
 package LeetCode;
 
-class Solution {
+public class FindMissingObservations {
     public int[] missingRolls(int[] rolls, int mean, int n) {
         int m = rolls.length;
         int totalSum = mean * (m + n);

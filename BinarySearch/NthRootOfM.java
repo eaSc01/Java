@@ -1,7 +1,7 @@
 package BinarySearch;
 
 
-class Solution {
+public class NthRootOfM {
     public double multiply(double x, double n) {
         double a = 1;
         

@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+public class UncommonWordsFromSentences {
     public String[] uncommonFromSentences(String s1, String s2) {
         Map<String, Integer> wordCount = new HashMap<>();
         

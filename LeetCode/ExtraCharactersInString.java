@@ -2,7 +2,7 @@ package LeetCode;
 
 import java.util.*;
 
-class Solution {
+public class ExtraCharactersInString {
     public int minExtraChar(String s, String[] dictionary) {
         Set<String> set = new HashSet<>();
         for (String d: dictionary) {
