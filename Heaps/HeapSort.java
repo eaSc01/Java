@@ -5,14 +5,14 @@ public class HeapSort {
         int[] arr = { 5, 2, 1, 3, 7, 4, 6, 0 };
         sort(arr);
 
-        for (int a: arr) {
+        for (int a : arr) {
             System.out.println(a);
         }
     }
 
     public static void sort(int[] arr) {
         // build max heap
-        for (int i = arr.length/2; i >= 0; i--) {
+        for (int i = arr.length / 2; i >= 0; i--) {
             heapify(i, arr.length, arr);
         }
 
