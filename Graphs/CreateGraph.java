@@ -18,7 +18,7 @@ public class CreateGraph {
 
     public static List<Edge>[] construct() {
         // Define the number of vertices in the graph
-        int vertices = 6;
+        int vertices = 4;
 
         // Create an array of lists to represent the adjacency list for the graph
         @SuppressWarnings("unchecked")
@@ -77,14 +77,35 @@ public class CreateGraph {
         // graph[5].add(new Edge(5, 0, 1));
 
         // weighted graph for Dijkstra
-        graph[0].add(new Edge(0, 1, 2));
-        graph[0].add(new Edge(0, 2, 4));
-        graph[1].add(new Edge(1, 3, 7));
-        graph[1].add(new Edge(1, 2, 1));
-        graph[2].add(new Edge(2, 4, 3));
-        graph[3].add(new Edge(3, 5, 1));
-        graph[4].add(new Edge(4, 5, 5));
-        graph[4].add(new Edge(4, 3, 2));
+        // graph[0].add(new Edge(0, 1, 2));
+        // graph[0].add(new Edge(0, 2, 4));
+        // graph[1].add(new Edge(1, 3, 7));
+        // graph[1].add(new Edge(1, 2, 1));
+        // graph[2].add(new Edge(2, 4, 3));
+        // graph[3].add(new Edge(3, 5, 1));
+        // graph[4].add(new Edge(4, 5, 5));
+        // graph[4].add(new Edge(4, 3, 2));
+
+        // weighted graph for Bellman Ford
+        // graph[0].add(new Edge(0, 1, 2));
+        // graph[0].add(new Edge(0, 2, 4));
+        // graph[1].add(new Edge(1, 2, -4));
+        // graph[2].add(new Edge(2, 3, 2));
+        // graph[3].add(new Edge(3, 4, 4));
+        // graph[4].add(new Edge(4, 1, -1));
+
+
+        // MST graph (directed-weighted)
+        graph[0].add(new Edge(0, 1, 10));
+        graph[0].add(new Edge(0, 2, 15));
+        graph[0].add(new Edge(0, 3, 30));
+        graph[1].add(new Edge(1, 0, 10));
+        graph[1].add(new Edge(1, 3, 40));
+        graph[2].add(new Edge(2, 0, 15));
+        graph[2].add(new Edge(2, 3, 50));
+        graph[3].add(new Edge(3, 1, 40));
+        graph[3].add(new Edge(3, 2, 50));
+
 
         // Return the constructed graph
         return graph;
@@ -327,48 +348,50 @@ public class CreateGraph {
 
     public static List<Integer> topologicalSortDFS(List<Edge>[] graph) {
         List<Integer> order = new ArrayList<>();
-        Stack<Integer> stk = new Stack<>();  // Stack to store the topological order
-        boolean[] vis = new boolean[graph.length];  // Visited array to track processed nodes
-    
-        // Iterate over all nodes in the graph to ensure we handle disconnected components
+        Stack<Integer> stk = new Stack<>(); // Stack to store the topological order
+        boolean[] vis = new boolean[graph.length]; // Visited array to track processed nodes
+
+        // Iterate over all nodes in the graph to ensure we handle disconnected
+        // components
         for (int i = 0; i < graph.length; i++) {
             if (!vis[i]) {
                 // Perform DFS for unvisited nodes
                 topologicalSortUtilDFS(i, stk, graph, vis);
             }
         }
-    
-        // Pop elements from the stack to get the topological order (reverse DFS finish times)
+
+        // Pop elements from the stack to get the topological order (reverse DFS finish
+        // times)
         while (!stk.empty()) {
             order.add(stk.pop());
         }
-    
-        return order;  // Return the topologically sorted order
+
+        return order; // Return the topologically sorted order
     }
-    
+
     public static void topologicalSortUtilDFS(
-        int curr,
-        Stack<Integer> stk,
-        List<Edge>[] graph,
-        boolean[] vis
-    ) {
-        vis[curr] = true;  // Mark the current node as visited
-    
+            int curr,
+            Stack<Integer> stk,
+            List<Edge>[] graph,
+            boolean[] vis) {
+        vis[curr] = true; // Mark the current node as visited
+
         // Explore all the neighbors of the current node
         for (int i = 0; i < graph[curr].size(); i++) {
             int neighbour = graph[curr].get(i).dest;
-    
+
             // If the neighbor hasn't been visited, recursively call DFS on it
             if (!vis[neighbour]) {
                 topologicalSortUtilDFS(neighbour, stk, graph, vis);
             }
         }
-    
+
         // After visiting all neighbors, push the current node to the stack
-        // This ensures that the current node is processed only after all its dependencies
+        // This ensures that the current node is processed only after all its
+        // dependencies
         stk.push(curr);
     }
-    
+
     // Kahn's Algorithm
     public static List<Integer> topologicalOrderBFS(List<Edge>[] graph) {
         // step 1: init indegree
@@ -421,25 +444,23 @@ public class CreateGraph {
     public static List<List<Integer>> allPathsToTarget(int src, int target, List<Edge>[] graph) {
         List<List<Integer>> allPaths = new ArrayList<>();
         allPathsToTargetUtil(
-            src, 
-            target, 
-            graph, 
-            new ArrayList<>(), 
-            allPaths,
-            new boolean[graph.length]
-        );
+                src,
+                target,
+                graph,
+                new ArrayList<>(),
+                allPaths,
+                new boolean[graph.length]);
 
         return allPaths;
     }
 
     public static void allPathsToTargetUtil(
-        int src,
-        int target,
-        List<Edge>[] graph,
-        List<Integer> path,
-        List<List<Integer>> allPaths,
-        boolean[] vis
-    ) {
+            int src,
+            int target,
+            List<Edge>[] graph,
+            List<Integer> path,
+            List<List<Integer>> allPaths,
+            boolean[] vis) {
         path.add(src);
         vis[src] = true;
 
@@ -515,6 +536,57 @@ public class CreateGraph {
         return dist;
     }
 
+    public static int[] bellmanFord(List<Edge>[] graph, int src) {
+        int[] dist = new int[graph.length];
+        Arrays.fill(dist, Integer.MAX_VALUE);
+        dist[src] = 0;
+
+        int V = graph.length;
+
+        for (int i = 0; i < V - 1; i++) {
+            for (int j = 0; j < graph.length; j++) {
+                for (int k = 0; k < graph[j].size(); k++) {
+                    Edge e = graph[j].get(k);
+                    int u = e.src;
+                    int v = e.dest;
+
+                    if (dist[u] != Integer.MAX_VALUE && dist[u] + e.weight < dist[v]) {
+                        dist[v] = dist[u] + e.weight;
+                    }
+                }
+            }
+        }
+
+        for (int i = 0; i < V; i++) {
+            System.out.println(src + " -> " + i + ": " + dist[i]);
+        }
+        return dist;
+    }
+
+    public static int minimumSpanningTree(List<Edge>[] graph) {
+        int mst = 0;
+        PriorityQueue<Pair> pq = new PriorityQueue<>();
+        boolean[] visited = new boolean[graph.length];
+        pq.add(new Pair(0 ,0));
+
+        while (!pq.isEmpty()) {
+            Pair curr = pq.remove();
+
+            if (!visited[curr.node]) {
+                visited[curr.node] = true;
+
+                mst += curr.distance;
+
+                for (int i = 0; i<graph[curr.node].size(); i++) {
+                    Edge e = graph[curr.node].get(i);
+                    pq.add(new Pair(e.dest, e.weight));
+                }
+            }
+        }
+
+        return mst;
+    }
+
     public static void main(String[] args) {
         List<Edge>[] graph = construct();
         // dfs(graph);
@@ -526,10 +598,8 @@ public class CreateGraph {
         // System.out.println(topologicalOrderBFS(graph));
 
         // System.out.println(allPathsToTarget(5, 1, graph));
-        int[] dijkstra = dijkstraAlgo(0, graph);
-
-        for (int i = 0; i < dijkstra.length; i++) {
-            System.out.println("0 -> " + i + ": " + dijkstra[i]);
-        }
+        // int[] dijkstra = dijkstraAlgo(0, graph);
+        // int[] bellman = bellmanFord(graph, 0);
+        System.out.println(minimumSpanningTree(graph));
     }
 }
